@@ -1,3 +1,5 @@
+### Unofficial fork of https://github.com/jteeuwen/go-bindata/, since latter one is gone
+
 ## bindata
 
 This package converts any file into managable Go source code. Useful for
