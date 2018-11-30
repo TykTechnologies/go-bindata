@@ -2,7 +2,7 @@
 
 ## bindata
 
-This package converts any file into managable Go source code. Useful for
+This package converts any file into manageable Go source code. Useful for
 embedding binary data into a go program. The file data is optionally gzip
 compressed before being converted to a raw byte slice.
 
@@ -44,7 +44,7 @@ Multiple input directories can be specified if necessary.
 	$ go-bindata dir1/... /path/to/dir2/... dir3
 
 
-The following paragraphs detail some of the command line options which can be 
+The following paragraphs detail some of the command line options which can be
 supplied to `go-bindata`. Refer to the `testdata/out` directory for various
 output examples from the assets in `testdata/in`. Each example uses different
 command line options.
@@ -92,8 +92,8 @@ It will now embed the latest version of the assets.
 
 Using the `-nomemcopy` flag, will alter the way the output file is generated.
 It will employ a hack that allows us to read the file data directly from
-the compiled program's `.rodata` section. This ensures that when we call
-call our generated function, we omit unnecessary memcopies.
+the compiled program's `.rodata` section. This ensures that when we call our
+generated function, we omit unnecessary memcopies.
 
 The downside of this, is that it requires dependencies on the `reflect` and
 `unsafe` packages. These may be restricted on platforms like AppEngine and
@@ -156,7 +156,7 @@ The default behaviour of the program is to use compression.
 
 The keys used in the `_bindata` map, are the same as the input file name
 passed to `go-bindata`. This includes the path. In most cases, this is not
-desireable, as it puts potentially sensitive information in your code base.
+desirable, as it puts potentially sensitive information in your code base.
 For this purpose, the tool supplies another command line flag `-prefix`.
 This accepts a portion of a path name, which should be stripped off from
 the map keys and function names.
@@ -186,6 +186,5 @@ and must follow the build tags syntax specified by the go tool.
 
 ### Related projects
 
-[go-bindata-assetfs](https://github.com/elazarl/go-bindata-assetfs#readme) - 
+[go-bindata-assetfs](https://github.com/elazarl/go-bindata-assetfs#readme) -
 implements `http.FileSystem` interface. Allows you to serve assets with `net/http`.
-
